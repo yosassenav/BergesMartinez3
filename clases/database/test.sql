@@ -25,13 +25,10 @@ DROP TABLE IF EXISTS `recordatorios`;
 CREATE TABLE `recordatorios` (
   `id_recordatorio` int(11) NOT NULL AUTO_INCREMENT,
   `Tipo` mediumtext NOT NULL,
-  `Titulo` mediumtext NOT NULL,
   `Materia` mediumtext NOT NULL,
   `Descripcion` text NOT NULL,
   `Estado` mediumtext NOT NULL,
-  `Prioridad` mediumtext NOT NULL,
-  `Fecha` date NOT NULL,
-  `Hora` mediumtext NOT NULL,
+  `Fecha` datetime NOT NULL,
   PRIMARY KEY (`id_recordatorio`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -42,7 +39,7 @@ CREATE TABLE `recordatorios` (
 
 LOCK TABLES `recordatorios` WRITE;
 /*!40000 ALTER TABLE `recordatorios` DISABLE KEYS */;
-INSERT INTO `recordatorios` VALUES (1,'Examen','Examen','Aprendizaje Estadistico','Problemas de clasificación','Pendiente','Alta','2019-11-11','16:00');
+INSERT INTO `recordatorios` VALUES (1,'Clase','Aprendizaje Estadistico','Problemas de clasificación','Pendiente','2019-11-11 16:00');
 /*!40000 ALTER TABLE `recordatorios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
